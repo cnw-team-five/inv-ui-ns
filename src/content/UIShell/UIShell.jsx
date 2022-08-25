@@ -16,6 +16,7 @@ import { Route, Routes, BrowserRouter, Link } from 'react-router-dom';
 import ErrorBoundary from "../../components/ErrorBoundary";
 import LandingPage from '../LandingPage';
 import NotFound from '../../components/NotFound';
+import StockItemList from "../StockItemList";
 
 
 class UIShell extends React.Component {
@@ -117,6 +118,7 @@ class UIShell extends React.Component {
                 <Content className='content'>
                     <Routes>
                         <Route path="/" element={<LandingPage />} />
+                        <Route path="/inventory/items" element={<StockItemList />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </Content>
